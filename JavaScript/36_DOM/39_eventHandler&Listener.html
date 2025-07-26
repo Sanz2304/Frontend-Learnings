@@ -1,0 +1,39 @@
+<!-- 39. EVENT HANDLER AND EVENT LISTENER:
+
+Event Handler: This is the process of handling the events of the element.
+
+Event Listener: This is the process of listening to the events of the element.
+
+Difference between Event Handler and Event Listener:
+- Event Handler is used to call the function when the event is triggered.
+- Event Listener is used to listen to the event and call the function when the event is triggered. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handler and Event Listener</title>
+</head>
+<body>
+    <h1> Event Handler vs Event Listener </h1>
+    <img src="img1.jpeg" alt="img1.jpeg">
+    <p> Im a butterfly  </p>
+    <button id="listener"> Listener </button>
+
+    <!-- onclick() is used to call the function firstHandler() and secondHandler() when the button is clicked. 
+    But we can only call one function at a time. It will not call both functions. 
+    It will return the output of the first function called. -->
+    <!-- <button id="handler" onclick="firstHandler()" onclick="secondHandler()"> Handler </button> -->
+
+
+    <!-- This is the button that will be used to call the function firstHandler() and secondHandler() when the button is clicked.
+    It will the function secondHandler() when the button is clicked.
+    because both events are overridden. First DOM will consider the firstHandler() and then it will consider the secondHandler() and firstHandler() will be ignored. -->
+    <button id="handler"> Handler </button>
+
+
+<script src="39_eventHandler&Listener.js"></script>
+</body>
+</html>

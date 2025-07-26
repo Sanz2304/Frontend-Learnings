@@ -1,0 +1,43 @@
+<!-- 38. Manipulation Elements: This is the process of changing the content of the element.
+
+innerHTML: This is the content of the element.
+textContent: This is the text content of the element.
+value: This is the value of the element.
+style: This is the style of the element.
+classList: This is the class list of the element.
+attributes: This is the attributes of the element. -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulation Elements</title>
+    <style>
+        .container {
+            background-color: rgba(0, 149, 255, 0.434);
+            width: 400px;
+            margin: auto;
+            padding: 10px;
+            box-shadow: 10px 10px 5px rgb(1, 72, 179);
+        }
+    </style>
+</head>
+<body>
+    <!-- .container>input+button+ol>li*3{Item} // This is short hand for creating a container with an input, button and a list with 3 items -->
+
+    <div class="container">
+        <input type="text" placeholder="Enter Input">
+        <button onclick="manipulateElements()"> Click me! </button>
+        <ol>
+            <li>Item</li>
+            <li>Item</li>
+            <li>Item</li>
+        </ol>
+    </div>
+
+    <script src="38_manipulationElements.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!-- 37. Traversing Elements: This is the process of moving from one element to another in the DOM tree.
+- parentNode, childNodes, previousSibling, nextSibling, firstChild, lastChild -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traversing</title>
+</head>
+<body>
+    <!-- div.parent>.child*3{Content} // this is short hand for creating 3 child elements with the class child and the content Content -->
+    <div class="parent">
+        santhosh
+        <div class="child1">content-1</div>
+        Buttu
+        <p>Sheetal</p>
+        <div class="child2">content-1</div>
+        sanz
+        <div class="child3">content-1</div>
+        kumar
+    </div>
+    <!-- onclick is used to call the function traverseElements() when the button is clicked -->
+    <button onclick="traverseElements()">Traverse Elements</button> 
+
+    <button ondblclick="selectSiblings()">Sibling elements - Double click</button>
+
+    <script src="37_traversing.js"></script>
+</body>
+</html>
