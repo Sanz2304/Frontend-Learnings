@@ -146,3 +146,14 @@ console.log(newObj); // { id: 123 } // Even though we have modified the value of
 
 Object.isFrozen(newObj); // true
 Object.isFrozen(person); // false
+
+// object.seal() : It is used to seal the object. We can't add, delete the properties of the object. We can modify the value of the object. It will return the object.
+
+newObj.id = 456;
+let obj = Object.seal(newObj); // { id: 456 } // This is sealed the object. but we can modify the value of the object.
+
+
+// Object.isSealed() : It is used to check if the object is sealed. It will return the boolean value.
+
+Object.isSealed(newObj); // true
+Object.isSealed(person); // false
