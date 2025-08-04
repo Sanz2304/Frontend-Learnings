@@ -9,7 +9,10 @@ class Learner {
         this.userAge = userAge
     }
     bio() {
-        return `Hi ${this.userName}, your age is ${this.userAge}`
+        return `Hi ${this.userName}, My age is ${this.userAge}`
+    }
+    makeItUppercase(){
+        return this.userName.toUpperCase()
     }
 }
 
@@ -46,12 +49,23 @@ class CollageStudent extends Learner {
     collageStudentIntro(){
         return `Hi am ${this.userName}, pursuing ${this.year} year in collage`
     }
+
+    // Overriding the bio method of the parent class. This is called method overriding. 
+    // If we don't want to use the bio method of the parent class, we can override it in the child class.
+    // Child class can have the same method name as the parent class, but with different implementation.
+    // This bio() only works for the child class, not for the parent class.
+    // This is also called shadowing the method of the parent class.
+
+    // This is also called polymorphism. Because we are overriding the method of the parent class.
+    bio(){
+        return super.bio() + ` and am pursuing ${this.year} year in collage` // Here we are calling the bio method of the parent class using the super keyword.
+    }
 }
 
 const collageStudent = new CollageStudent('Buttu', 21, '3rd');
-// console.log(collageStudent.bio()); // This will call the bio method of the parent class.
+console.log(collageStudent.bio()); // This will call the bio method of the parent class.
 // console.log(collageStudent.collageStudentIntro()); // This will call the collageStudentIntro method of the child class along with the properties of the parent class.
-
+console.log(collageStudent.makeItUppercase()); //
 
 
 // Multiple inheritance - is a mechanism that allows us to create a new class that inherits the properties and methods of multiple existing classes.
