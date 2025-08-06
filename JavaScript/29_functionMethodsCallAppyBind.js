@@ -71,3 +71,46 @@ person2.empRoleDetails.bind(person1, 500, 600)(); // 1100Sheetal Santhosh Kumar 
 
 let callFunction = person2.empRoleDetails.bind(person1, 500, 600); // another way to call the function.
 callFunction(); // 1100Sheetal Santhosh Kumar
+
+
+
+function greetUser(firstName, lastName){
+    return `${firstName} ${lastName}`
+}
+
+const result = greetName.call({ favColor: 'red' }, 'Anbu', 'Selvan')
+// const result2 = greetName.call(null, 'Jenika', 'Selvan')
+
+const result2 = Math.min.apply(null, numbers)
+const result3 = Math.min.bind(null, ...numbers)
+
+console.log( greetUser('Santhosh', 'Kumar'));
+// Result of greetName using call()
+console.log(result) // Output: "Hello Anbu Selvan, red"
+console.log(result2) // Output: "Hello Jenika Selvan,"
+
+// Result of Math.min using call() and apply()
+console.log('using call()', result) // Output: -Infinity (since `this` is null for Math.min with no arguments passed)
+console.log('using apply()', result2) // Output: 1
+
+// Result of Math.min using bind()
+console.log('using bind()', result3()) // Output: 1
+
+
+
+
+const numbers = [5, 2, 4, 7, 1]
+
+console.log(Math.min(5, 2, 4, 7, 1))
+console.log(Math.max(5, 2, 4, 7, 1))
+
+//  Function.prototype.apply()
+// const result = Math.min.call(null, 5, 2, 4, 7, 1)
+// const result2 = Math.min.apply(null, numbers)
+// // Function.prototype.bind()
+
+// const result3 = Math.min.bind(null, ...numbers)
+
+// console.log('using call()', result)
+// console.log('using apply()', result2)
+// console.log('using bind()', result3())
