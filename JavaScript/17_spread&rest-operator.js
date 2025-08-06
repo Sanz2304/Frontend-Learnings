@@ -116,3 +116,37 @@ restParam(1,2,3,4,5,6); // 1 2 [ 3, 4, 5, 6 ]
 // restParam(1,2,3,4,5,6); 
 
 
+const breakfast = ['Idly', 'Sambar']
+const lunch = ['Meals', 'Fresh Juice']
+const dinner = ['Chapathi', 'Kuruma']
+
+const isSummer = true
+
+const myFoods = [...breakfast, ...lunch, ...(isSummer ? ['Watermelon'] : []), // added watermelon only in summer
+...dinner]
+
+console.log(myFoods); // Output: [ 'Idly', 'Sambar', 'Meals', 'Fresh Juice', 'Watermelon', 'Chapathi', 'Kuruma' ]
+
+
+car = {
+    brand : "BMW",
+    model : "X5",
+    color : "Black",
+    price : 1000000,
+}
+
+ExtraCarDetails = {
+    fuelType : "Petrol",    
+    transmission : "Automatic",
+}
+
+const car2 = { ...car, ...ExtraCarDetails, color : "Red" }
+console.log(car2); // Output: { brand: 'BMW', model: 'X5', color: 'Red', price: 1000000, fuelType: 'Petrol', transmission: 'Automatic' }
+
+
+const myName = "Santhosh";
+console.log(...myName); // Output: S a n t h o s h // it will print each character of the string
+
+
+
+
