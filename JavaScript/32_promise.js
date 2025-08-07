@@ -131,3 +131,86 @@ promiseData.then( (message) => {  // messsage parameter is used to handle the re
 //         console.log( error );
 //     }  
 // )
+
+
+// const orderCoffe = new Promise((resolve, reject) => {
+
+//     isTeaMasterThere = true
+// setInterval(() => {
+//       if(isTeaMasterThere){
+//       resolve('Here is your Tea!')
+//     } else {
+//       reject('Sorry! We are closed')
+//     }
+// }, 5000);
+
+
+// })
+
+// const coffeeState = orderCoffe.then((msg) => {
+//   console.log(msg);
+
+//   const orderBill = new Promise(() => {
+//     console.log('Your bill is Rs.20')
+//   })
+
+// }).catch((mes) => {
+//   console.log(mes);
+
+// }).finally(() => {
+//   console.log('Thanks for Visiting..!');
+
+// })
+
+// console.log('Ordering Coffee...');
+
+
+console.log('Countdown Begins..!');
+
+const wait = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+
+wait(1000)
+  .then(() => {
+    console.log(3);
+    return wait(1000);
+  })
+  .then(() => {
+    console.log(2);
+    return wait(1000);
+  })
+  .then(() => {
+    console.log(1);
+    return wait(1000);
+  })
+  .then(() => {
+    console.log('Happy New Year..!');
+  });
+
+
+const userHasAllInfo = new Promise((resolve, reject) => {
+  // 1. Get user information
+  resolve('I got the user info')
+})
+
+userHasAllInfo
+  .then((user) => {
+    console.log('USER INFO:', user)
+
+    return new Promise((resolve, reject) => {
+      // API: Call the user posts api: // 2. Get user posts
+      //   resolve('I got the user posts')
+      reject("I Don't have the posts")
+    })
+  })
+  .then((userPost) => {
+    console.log('USER INFO POST:', userPost)
+
+    return new Promise((resolve, reject) => {
+      // API: Call the user images api: // 3. Get user images
+      resolve('I got the user images')
+    })
+  })
+  .then((userImages) => {
+    console.log('USER INFO IMAGES: ', userImages)
+  })
+  .catch((reason) => console.log('Error:', reason))
