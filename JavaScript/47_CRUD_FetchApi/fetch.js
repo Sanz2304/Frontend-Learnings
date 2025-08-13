@@ -108,7 +108,7 @@ async function updateQuoteAuthor(id) {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        author: 'Anbuselvan rocky',
+        author: 'Santhosh Sheetal',
       }),
     }
   )

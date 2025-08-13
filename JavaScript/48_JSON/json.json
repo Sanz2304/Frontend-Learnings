@@ -1,0 +1,36 @@
+[
+    {
+        "name": "John",
+        "age": 20,
+        "isStudent": true,
+        "skills": [
+            "HTML",
+            "CSS",
+            "JavaScript"
+        ],
+        "address": {
+            "street": "123 Main St",
+            "city": "Anytown",
+            "state": "CA",
+            "zip": "12345"
+        },
+        "weakness": null
+    },
+    {
+        "name": "John",
+        "age": 20,
+        "isStudent": true,
+        "skills": [
+            "HTML",
+            "CSS",
+            "JavaScript"
+        ],
+        "address": {
+            "street": "123 Main St",
+            "city": "Anytown",
+            "state": "CA",
+            "zip": "12345"
+        },
+        "weakness": null
+    }
+]
